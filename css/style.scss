@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap');
+
+$color-primary: #8E44AD;
+$color-secondary: #16A085;
+$color-headings: #2C3E50;
+$color-text: #34495E;
+
+@mixin deb {
+  border: magenta 1px solid;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  max-width: 1200px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 2rem auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+
+  &__logo {
+
+    p {
+      font-size: 2rem;
+      color: $color-primary;
+      font-weight: 900;
+    }
+
+    span {
+      color: white;
+      background-color: $color-primary;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  }
+
+  &__navigation {
+    flex-grow: 1;
+
+    ul {
+      list-style: none;
+      font-size: 1.6rem;
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        flex-basis: 11.9rem;
+
+      }
+    }
+  }
+}
+
+.main {
+  margin: 0 1rem;
+  display: flex;
+  height: 90vh;
+  align-items: center;
+
+  &__image-section {
+    flex: 2;
+
+    img {
+      width: 100%;
+    }
+  }
+  &__text-section {
+    flex: 1.3;
+    margin-left: -10rem;
+
+    h1 {
+      font-size: 7.2rem;
+      font-weight: 400;
+      color: $color-headings;
+      line-height: 9rem;
+    }
+    p {
+      font-size: 2.2rem;
+      color: $color-text;
+      line-height: 3.3rem;
+      max-width: 39rem;
+      margin-bottom: 3rem;
+    }
+
+    &--buttons {
+      display: flex;
+      max-width: 44.4rem;
+      justify-content: space-between;
+    }
+  }
+
+}
+
+.button {
+  margin: .5rem;
+  width: 20.3rem;
+  height: 5.7rem;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: none;
+  font-size: 2rem;
+  font-weight: 500;
+
+  &--green {
+    background-color: $color-secondary;
+    color: white;
+  }
+
+  &--white {
+    background-color: white;
+    color: $color-secondary;
+    border: $color-secondary 2px solid;
+  }
+}
+
+
