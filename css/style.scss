@@ -3,7 +3,7 @@
 $color-primary: #8E44AD;
 $color-secondary: #16A085;
 $color-headings: #2C3E50;
-$color-text: #34495E;
+$color-text: #65617D;
 
 @mixin deb {
   border: magenta 1px solid;
@@ -22,16 +22,25 @@ html {
 
 body {
   box-sizing: border-box;
-  max-width: 1200px;
   font-family: 'Montserrat', sans-serif;
-  margin: 2rem auto;
+  color: $color-text;
+  font-weight: 400;
+
 }
 
+h1, h2 {
+  color: $color-headings;
+}
+h2 {
+  font-weight: 500;
+}
 .header {
+  max-width: 1200px;
+  margin: 2rem auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 1rem;
+
 
   &__logo {
 
@@ -71,10 +80,11 @@ body {
   }
 }
 
-.main {
-  margin: 0 1rem;
+.start-section {
+  max-width: 1200px;
+  margin: 2rem auto;
   display: flex;
-  height: 90vh;
+  height: 95vh;
   align-items: center;
 
   &__image-section {
@@ -91,12 +101,11 @@ body {
     h1 {
       font-size: 7.2rem;
       font-weight: 400;
-      color: $color-headings;
       line-height: 9rem;
     }
     p {
+      margin-top: 2.9rem;
       font-size: 2.2rem;
-      color: $color-text;
       line-height: 3.3rem;
       max-width: 39rem;
       margin-bottom: 3rem;
@@ -123,7 +132,7 @@ body {
   font-weight: 500;
 
   &--green {
-    background-color: $color-secondary;
+    background: linear-gradient(to right, $color-secondary, lighten($color-secondary, 10%));
     color: white;
   }
 
@@ -133,5 +142,148 @@ body {
     border: $color-secondary 2px solid;
   }
 }
+.section-header {
+  text-align: center;
 
+  h1 {
+    font-size: 4.4rem;
+    font-weight: 700;
+    margin-bottom: 4.4rem;
+  }
+  p {
+    display: inline-block;
+    font-size: 1.8rem;
+    max-width: 71rem;
+    line-height: 2.7rem;
+  }
+
+}
+.skills-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+
+
+  &__listed-skills {
+    margin-top: 8.8rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.skill-item {
+  max-width: 20rem;
+  text-align: center;
+
+  &__icon {
+    width: 100%;
+  }
+
+  &__description {
+
+    h2 {
+      font-size: 2.4rem;
+      margin: 2.5rem auto 1.8rem auto;
+    }
+    p {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+  }
+}
+
+.projects-section {
+  max-width: 1200px;
+  margin: 20rem auto 0 auto;
+}
+
+.project-item {
+  margin-top: 7.2rem;
+  margin-bottom: 10.5rem;
+  display: flex;
+  justify-content: space-evenly;
+
+  &__icon {
+    margin-left: 2rem;
+    align-self: center;
+    img {
+      width: 100%;
+    }
+
+    &--reversed-order {
+      order: 2;
+      margin-left: -7rem;
+    }
+
+  }
+
+  &__description {
+    margin-left: -7rem;
+    h2 {
+      font-size: 3.4rem;
+      line-height: 5rem;
+      max-width: 50rem;
+      margin-bottom: 2.2rem;
+    }
+    p{
+      font-size: 2.2rem;
+      line-height: 3.4rem;
+      font-weight: 400;
+      max-width: 42.2rem;
+    }
+
+    &--reversed-order {
+      order: 1;
+      margin-left: 2rem;
+    }
+  }
+}
+
+.about-section {
+  background: url("../images/background_green.svg") no-repeat;
+  background-size: cover;
+  padding-bottom: 10rem;
+  width: 100%;
+  color: white;
+
+  &__header {
+    h1 {
+      padding-top: 14rem;
+      color: white;
+    }
+    p {
+      display: block;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+    p:last-child {
+      text-align: right;
+      margin-top: 1.6rem;
+    }
+  }
+  &__container {
+    max-width: 1200px;
+    margin: 6rem auto 0 auto;
+    display: flex;
+    justify-content: center;
+    font-size: 2.2rem;
+
+    div:last-child {
+      max-width: 66.7rem;
+      margin-left: 5rem;
+      align-self: center;
+
+      p {
+        line-height: 3.4rem;
+        font-size: 2.2rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.contact-section {
+  max-width: 1200px;
+  margin: 10rem auto 0 auto;
+
+}
 

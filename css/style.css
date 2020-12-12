@@ -13,16 +13,25 @@ html {
 
 body {
   box-sizing: border-box;
-  max-width: 1200px;
   font-family: "Montserrat", sans-serif;
-  margin: 2rem auto;
+  color: #65617D;
+  font-weight: 400;
+}
+
+h1, h2 {
+  color: #2C3E50;
+}
+
+h2 {
+  font-weight: 500;
 }
 
 .header {
+  max-width: 1200px;
+  margin: 2rem auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 1rem;
 }
 .header__logo p {
   font-size: 2rem;
@@ -52,36 +61,36 @@ body {
   flex-basis: 11.9rem;
 }
 
-.main {
-  margin: 0 1rem;
+.start-section {
+  max-width: 1200px;
+  margin: 2rem auto;
   display: flex;
-  height: 90vh;
+  height: 95vh;
   align-items: center;
 }
-.main__image-section {
+.start-section__image-section {
   flex: 2;
 }
-.main__image-section img {
+.start-section__image-section img {
   width: 100%;
 }
-.main__text-section {
+.start-section__text-section {
   flex: 1.3;
   margin-left: -10rem;
 }
-.main__text-section h1 {
+.start-section__text-section h1 {
   font-size: 7.2rem;
   font-weight: 400;
-  color: #2C3E50;
   line-height: 9rem;
 }
-.main__text-section p {
+.start-section__text-section p {
+  margin-top: 2.9rem;
   font-size: 2.2rem;
-  color: #34495E;
   line-height: 3.3rem;
   max-width: 39rem;
   margin-bottom: 3rem;
 }
-.main__text-section--buttons {
+.start-section__text-section--buttons {
   display: flex;
   max-width: 44.4rem;
   justify-content: space-between;
@@ -99,13 +108,139 @@ body {
   font-weight: 500;
 }
 .button--green {
-  background-color: #16A085;
+  background: linear-gradient(to right, #16A085, #1ccdaa);
   color: white;
 }
 .button--white {
   background-color: white;
   color: #16A085;
   border: #16A085 2px solid;
+}
+
+.section-header {
+  text-align: center;
+}
+.section-header h1 {
+  font-size: 4.4rem;
+  font-weight: 700;
+  margin-bottom: 4.4rem;
+}
+.section-header p {
+  display: inline-block;
+  font-size: 1.8rem;
+  max-width: 71rem;
+  line-height: 2.7rem;
+}
+
+.skills-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+.skills-section__listed-skills {
+  margin-top: 8.8rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.skill-item {
+  max-width: 20rem;
+  text-align: center;
+}
+.skill-item__icon {
+  width: 100%;
+}
+.skill-item__description h2 {
+  font-size: 2.4rem;
+  margin: 2.5rem auto 1.8rem auto;
+}
+.skill-item__description p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.projects-section {
+  max-width: 1200px;
+  margin: 20rem auto 0 auto;
+}
+
+.project-item {
+  margin-top: 7.2rem;
+  margin-bottom: 10.5rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.project-item__icon {
+  margin-left: 2rem;
+  align-self: center;
+}
+.project-item__icon img {
+  width: 100%;
+}
+.project-item__icon--reversed-order {
+  order: 2;
+  margin-left: -7rem;
+}
+.project-item__description {
+  margin-left: -7rem;
+}
+.project-item__description h2 {
+  font-size: 3.4rem;
+  line-height: 5rem;
+  max-width: 50rem;
+  margin-bottom: 2.2rem;
+}
+.project-item__description p {
+  font-size: 2.2rem;
+  line-height: 3.4rem;
+  font-weight: 400;
+  max-width: 42.2rem;
+}
+.project-item__description--reversed-order {
+  order: 1;
+  margin-left: 2rem;
+}
+
+.about-section {
+  background: url("../images/background_green.svg") no-repeat;
+  background-size: cover;
+  padding-bottom: 10rem;
+  width: 100%;
+  color: white;
+}
+.about-section__header h1 {
+  padding-top: 14rem;
+  color: white;
+}
+.about-section__header p {
+  display: block;
+  margin: 0 auto;
+  font-weight: 400;
+}
+.about-section__header p:last-child {
+  text-align: right;
+  margin-top: 1.6rem;
+}
+.about-section__container {
+  max-width: 1200px;
+  margin: 6rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+  font-size: 2.2rem;
+}
+.about-section__container div:last-child {
+  max-width: 66.7rem;
+  margin-left: 5rem;
+  align-self: center;
+}
+.about-section__container div:last-child p {
+  line-height: 3.4rem;
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.contact-section {
+  max-width: 1200px;
+  margin: 10rem auto 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
