@@ -9,6 +9,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -16,6 +17,11 @@ body {
   font-family: "Montserrat", sans-serif;
   color: #65617D;
   font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 h1, h2 {
@@ -48,6 +54,15 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+.header__logo span:hover {
+  animation-name: letter-i;
+  animation-duration: 1s;
+}
+@keyframes letter-i {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .header__navigation {
   flex-grow: 1;
 }
@@ -56,16 +71,33 @@ h2 {
   font-size: 1.6rem;
   display: flex;
   justify-content: flex-end;
+  transition: 0.2s all;
+}
+.header__navigation ul:hover {
+  font-size: 2rem;
 }
 .header__navigation ul li {
   flex-basis: 11.9rem;
+  text-align: center;
+  padding: 1rem;
+  transition: 0.2s all;
+}
+.header__navigation ul li:hover {
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+.header__navigation ul li:active {
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  font-size: 1.8rem;
 }
 
 .start-section {
   max-width: 1200px;
   margin: 2rem auto;
   display: flex;
-  height: 95vh;
+  height: 90vh;
   align-items: center;
 }
 .start-section__image-section {
@@ -106,19 +138,48 @@ h2 {
   box-shadow: none;
   font-size: 2rem;
   font-weight: 500;
+  transition: all 0.2s;
+}
+.button:hover {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+.button:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  letter-spacing: 0rem;
+  font-weight: 600;
 }
 .button--green {
   background: linear-gradient(to right, #16A085, #1ccdaa);
   color: white;
+}
+.button--green:hover {
+  background: white;
+  color: #16A085;
+  border: #16A085 2px solid;
+}
+.button--green-contact {
+  font-size: 1.7rem;
+  width: 12rem;
+  height: 4.4rem;
 }
 .button--white {
   background-color: white;
   color: #16A085;
   border: #16A085 2px solid;
 }
+.button--white:hover {
+  background: linear-gradient(to right, #16A085, #1ccdaa);
+  color: white;
+  border: none;
+}
 
 .section-header {
   text-align: center;
+  padding-top: 10rem;
 }
 .section-header h1 {
   font-size: 4.4rem;
@@ -143,8 +204,16 @@ h2 {
 }
 
 .skill-item {
-  max-width: 20rem;
+  max-width: 22rem;
   text-align: center;
+  padding: 2rem;
+  transition: all 0.2s;
+}
+.skill-item:hover {
+  border: 2px solid rgba(101, 97, 125, 0.2);
+  border-radius: 5px;
+  transform: scale(1.2);
+  background: #fbfbfc;
 }
 .skill-item__icon {
   width: 100%;
@@ -160,7 +229,7 @@ h2 {
 
 .projects-section {
   max-width: 1200px;
-  margin: 20rem auto 0 auto;
+  margin: 8rem auto 0 auto;
 }
 
 .project-item {
@@ -208,7 +277,7 @@ h2 {
   color: white;
 }
 .about-section__header h1 {
-  padding-top: 14rem;
+  padding-top: 5rem;
   color: white;
 }
 .about-section__header p {
@@ -240,7 +309,66 @@ h2 {
 
 .contact-section {
   max-width: 1200px;
-  margin: 10rem auto 0 auto;
+  margin: 0 auto 5rem auto;
+}
+.contact-section__container {
+  margin-top: 7.8rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.contact-section__container--img {
+  width: 100%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+.contact-form__input-field {
+  border: #8E44AD solid 1px;
+  border-radius: 0.5rem;
+  width: 34.5rem;
+  height: 3.5rem;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 1rem;
+}
+.contact-form__input-field:focus {
+  border: #8E44AD solid 2px;
+}
+.contact-form__input-field::placeholder {
+  color: #CCCCCC;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.contact-form__input-field--message {
+  height: 12rem;
+}
+.contact-form__input-field--message::placeholder {
+  padding-top: 4rem;
+}
+
+footer {
+  height: 6.9rem;
+  background: #535461;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer div {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+footer div img {
+  padding: 0.5rem;
+}
+
+.author {
+  text-align: right;
+  color: #fff;
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

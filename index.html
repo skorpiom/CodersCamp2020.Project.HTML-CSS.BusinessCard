@@ -18,10 +18,10 @@
         </div>
         <nav class="header__navigation">
             <ul>
-                <li>Skills</li>
-                <li>Projects</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -36,13 +36,19 @@
                 <p>Here some catchy text, don’t know what should be placed.</p>
 
                 <div class="start-section__text-section--buttons">
-                    <button class="button button--green">Projects</button>
+                    <a href="#projects">
+                    <button class="button button--green">
+                        Projects
+                    </button>
+                    </a>
+                    <a href="#contact">
                     <button class="button button--white">Contact me</button>
+                    </a>
                 </div>
             </section>
         </section>
 
-        <section class="skills-section">
+        <section class="skills-section" id="skills">
             <header class="section-header skills-section__header">
                 <h1>Skills</h1>
                 <p>Perfect place for random quote about thirst for knowledge,
@@ -91,7 +97,7 @@
             </article>
         </section>
 
-        <section class="projects-section">
+        <section class="projects-section"  id="projects">
             <header class="section-header projects-section__header">
                 <h1>Projects</h1>
                 <p>Because I need to keep consistency here also I’m gonna place some catchy text
@@ -144,10 +150,9 @@
                     </p>
                 </div>
             </article>
-
-
         </section>
-        <section class="about-section">
+
+        <section class="about-section" id="about">
             <header class="section-header about-section__header">
                 <h1>About me</h1>
                 <p>"'Who in the world am I?' Ah, that's the great puzzle!"
@@ -176,13 +181,38 @@
 
         </section>
 
-        <section class="contact-section">
+        <section class="contact-section" id="contact">
             <header class="section-header contact-section__header">
                 <h1>Contact me</h1>
                 <p>Of course don’t hesistate to contact me anytime because I’d love to contribute to development of your product.
                 </p>
             </header>
-            <article class="about-section__container">
+            <article class="contact-section__container">
+                <div>
+                    <form class="contact-form">
+                        <input class="contact-form__input-field" type="text" placeholder="Name">
+                        <input class="contact-form__input-field" type="text" placeholder="Your email address">
+                        <input class="contact-form__input-field" type="text" placeholder="Topic">
+                        <textarea class="contact-form__input-field contact-form__input-field--message" name="message" placeholder="Message"></textarea>
+                        <button class="button button--green button--green-contact">Send</button>
+                    </form>
+                </div>
+                <div>
+                    <img class="contact-section__container--img" src="images/contac-me_icon.svg">
+                </div>
+            </article>
+        </section>
+
+        <footer>
+            <div></div>
+            <div>
+                <img src="images/social-fb_icon.svg">
+                <img src="images/social-twitter_icon.svg" alt="">
+                <img src="images/social-linkein_icon.svg" alt="">
+            </div>
+            <div class="author"><p>Designed & Coded by Ireneusz Petryszak<p></p></div>
+        </footer>
+
     </main>
 
 </body>
