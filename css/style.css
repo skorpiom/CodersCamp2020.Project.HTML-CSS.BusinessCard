@@ -73,9 +73,6 @@ h2 {
   justify-content: flex-end;
   transition: 0.2s all;
 }
-.header__navigation ul:hover {
-  font-size: 2rem;
-}
 .header__navigation ul li {
   flex-basis: 11.9rem;
   text-align: center;
@@ -95,9 +92,9 @@ h2 {
 
 .start-section {
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 12rem auto 2rem auto;
   display: flex;
-  height: 90vh;
+  height: 90%;
   align-items: center;
 }
 .start-section__image-section {
@@ -105,6 +102,7 @@ h2 {
 }
 .start-section__image-section img {
   width: 100%;
+  padding: 5%;
 }
 .start-section__text-section {
   flex: 1.3;
@@ -128,58 +126,9 @@ h2 {
   justify-content: space-between;
 }
 
-.button {
-  margin: 0.5rem;
-  width: 20.3rem;
-  height: 5.7rem;
-  outline: none;
-  border: none;
-  border-radius: 2rem;
-  box-shadow: none;
-  font-size: 2rem;
-  font-weight: 500;
-  transition: all 0.2s;
-}
-.button:hover {
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-}
-.button:active {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  letter-spacing: 0rem;
-  font-weight: 600;
-}
-.button--green {
-  background: linear-gradient(to right, #16A085, #1ccdaa);
-  color: white;
-}
-.button--green:hover {
-  background: white;
-  color: #16A085;
-  border: #16A085 2px solid;
-}
-.button--green-contact {
-  font-size: 1.7rem;
-  width: 12rem;
-  height: 4.4rem;
-}
-.button--white {
-  background-color: white;
-  color: #16A085;
-  border: #16A085 2px solid;
-}
-.button--white:hover {
-  background: linear-gradient(to right, #16A085, #1ccdaa);
-  color: white;
-  border: none;
-}
-
 .section-header {
   text-align: center;
-  padding-top: 10rem;
+  padding: 9rem 1rem 0 1rem;
 }
 .section-header h1 {
   font-size: 4.4rem;
@@ -320,6 +269,207 @@ h2 {
   width: 100%;
 }
 
+footer {
+  height: 6.9rem;
+  background: #535461;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer div {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+footer div img {
+  padding: 0.5rem;
+}
+
+.author {
+  text-align: right;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    flex-direction: column;
+  }
+  .header__navigation {
+    margin: 1.5rem;
+  }
+
+  .start-section {
+    flex-direction: column;
+    margin: 2rem auto 0.5rem auto;
+  }
+  .start-section__text-section {
+    margin: 2rem auto 1rem auto;
+    padding: 1rem;
+    text-align: center;
+  }
+  .start-section__text-section h1 {
+    font-weight: 400;
+    line-height: 6rem;
+    font-size: 5rem;
+  }
+  .start-section__text-section p {
+    margin-top: 2rem;
+    font-size: 2.2rem;
+    line-height: 3.3rem;
+    margin-bottom: 2rem;
+  }
+  .start-section__text-section--buttons {
+    flex-direction: column;
+  }
+
+  .section-header {
+    padding: 2rem 1rem 0 1rem;
+  }
+  .section-header h1 {
+    margin-bottom: 3rem;
+  }
+
+  .skills-section {
+    margin: 2rem auto;
+  }
+  .skills-section__listed-skills {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skill-item {
+    align-self: center;
+    margin-top: 4rem;
+  }
+
+  .project-item {
+    flex-direction: column;
+    margin-top: 6rem;
+  }
+  .project-item__icon {
+    margin-left: 0;
+    align-self: center;
+  }
+  .project-item__icon img {
+    width: 100%;
+  }
+  .project-item__icon--reversed-order {
+    order: 1;
+    margin-left: 0rem;
+    margin-top: -2rem;
+  }
+  .project-item__description {
+    align-self: center;
+    margin: 0;
+    text-align: center;
+    padding: 1rem;
+  }
+  .project-item__description h2 {
+    margin-top: 2rem;
+    line-height: 4rem;
+  }
+  .project-item__description p {
+    margin: 0 auto 0 auto;
+  }
+  .project-item__description--reversed-order {
+    order: 2;
+    margin: 0;
+  }
+
+  .about-section {
+    background-color: #16A085;
+  }
+  .about-section__container {
+    max-width: 1200px;
+    margin: 6rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2.2rem;
+  }
+  .about-section__container div {
+    align-self: center;
+  }
+  .about-section__container div:last-child {
+    margin: 1rem 0 0 0;
+    padding: 3rem;
+  }
+  .about-section__container div:last-child p {
+    text-align: center;
+  }
+
+  .contact-section {
+    margin: 5rem auto 5rem auto;
+  }
+  .contact-section__container {
+    margin-top: 3rem;
+    flex-direction: column;
+  }
+  .contact-section__container div {
+    align-self: center;
+  }
+  .contact-section__container div:first-child {
+    order: 1;
+  }
+  .contact-section__container--img {
+    padding: 10%;
+  }
+
+  footer div:first-child {
+    display: none;
+  }
+}
+.button {
+  margin: 0.7rem 0.5rem 0.7rem 0.5rem;
+  width: 20.3rem;
+  height: 5.7rem;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: none;
+  font-size: 2rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.button:hover {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+.button:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+.button--green {
+  background: linear-gradient(to right, #16A085, #1ccdaa);
+  color: white;
+}
+.button--green:hover {
+  background: white;
+  color: #16A085;
+  border: #16A085 2px solid;
+}
+.button--green-contact {
+  font-size: 1.7rem;
+  width: 12rem;
+  height: 4.4rem;
+}
+.button--white {
+  background-color: white;
+  color: #16A085;
+  border: #16A085 2px solid;
+}
+.button--white:hover {
+  background: linear-gradient(to right, #16A085, #1ccdaa);
+  color: white;
+  border: none;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -347,28 +497,6 @@ h2 {
 }
 .contact-form__input-field--message::placeholder {
   padding-top: 4rem;
-}
-
-footer {
-  height: 6.9rem;
-  background: #535461;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-footer div {
-  flex: 1;
-  text-align: center;
-  padding: 1rem;
-}
-footer div img {
-  padding: 0.5rem;
-}
-
-.author {
-  text-align: right;
-  color: #fff;
-  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */
