@@ -289,6 +289,8 @@ footer div img {
   text-align: right;
   color: #fff;
   font-size: 1.4rem;
+  position: relative;
+  left: -20px;
 }
 
 @media screen and (max-width: 1000px) {
